@@ -1,0 +1,46 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			MYCHAT
+			<img src="">
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+
+	<div class="app-login" id="app-login">
+		<form>
+			<label>
+				{{ user }}<br>
+			</label>
+			<label class="col-md-12">
+				Correo electrónico:<br>
+			</label>
+			<input [(ngModel)]="email" class="col-md-12" type="text" name="email" placeholder="Ingrese su email"><br>
+			<label class="col-md-12">
+				Contraseña:
+			</label><br>
+			<input [(ngModel)]="password" class="col-md-12 espacioBottom" type="password" name="pass" placeholder="Ingrese su contraseña">
+
+
+			<div class="row">
+				<button class="col-md-12 btn btn-dark" (click)="loginUserContra()" type="submit" name="action">Ingresar
+				</button>
+
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<button class="col-md-4 btn btn-danger" (click)="login('google')" type="submit" name="action">
+					<ion-icon name="logo-google"></ion-icon>Google
+				</button>				
+				<button class="col-md-4 btn btn-info" (click)="login('twitter')"type="submit" name="action">
+					<ion-icon name="logo-twitter"></ion-icon>
+					Twitter
+				</button>
+				<div class="col-md-2"></div>				
+			</div>
+
+		</form>
+	</div>
+
